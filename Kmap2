@@ -1,0 +1,11 @@
+module top_module(
+    input a,
+    input b,
+    input c,
+    input d,
+    output out  ); 
+    assign out = (~a & ~d) |        // Group 1
+                  (~c & ~b)|          // Group 3
+                 (c & b & d)| (a & c & d);          // Group 4
+
+endmodule
